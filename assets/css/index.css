@@ -18,6 +18,7 @@ iframe {
 }
 
 .layui-body {
+  /* 作用在于去掉外边的滚动条避免双滚动条 */
   overflow: hidden;
 }
 
