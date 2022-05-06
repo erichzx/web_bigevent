@@ -5,7 +5,7 @@ $(function() {
   var $image = $('#image')
   // 1.2 配置选项
   const options = {
-    // 纵横比
+    // 纵横比 可以设置 16/9  这样的数据
     aspectRatio: 1,
     // 指定预览区域
     preview: '.img-preview'
@@ -21,8 +21,10 @@ $(function() {
 
   // 为文件选择框绑定 change 事件
   $('#file').on('change', function(e) {
+    console.log(e)
     // 获取用户选择的文件
     var filelist = e.target.files
+    //选择过图片后，再不选择，才会触发
     if (filelist.length === 0) {
       return layer.msg('请选择照片！')
     }
@@ -48,6 +50,7 @@ $(function() {
         height: 100
       })
       .toDataURL('image/png') // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
+      console.log(dataURL)
     // 2. 调用接口，把头像上传到服务器
     $.ajax({
       method: 'POST',

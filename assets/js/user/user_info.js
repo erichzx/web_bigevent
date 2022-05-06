@@ -5,6 +5,7 @@ $(function() {
   form.verify({
     nickname: function(value) {
       if (value.length > 6) {
+        //验证中return的字符串会被自动渲染提示
         return '昵称长度必须在 1 ~ 6 个字符之间！'
       }
     }

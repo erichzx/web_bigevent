@@ -8,7 +8,7 @@ $(function() {
         return '新旧密码不能相同！'
       }
     },
-    rePwd: function(value) {
+    rePwd: function(value) {  //value就是配置的input的value
       if (value !== $('[name=newPwd]').val()) {
         return '两次密码不一致！'
       }
