@@ -28,7 +28,9 @@ function initEditor() {
        preview | \
        forecolor emoticons |\
        codesample fontsizeselect |\
-       imageupload',
+       ',
+      //  imageupload
+      // 上面的imageupload放在上上面的  ',  前就显示上传图片按钮，但需要配置imageupload_url
     //字体大小
     fontsize_formats: '10pt 12pt 14pt 18pt 24pt 36pt',
     //按tab不换行
